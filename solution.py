@@ -5,7 +5,7 @@ import numpy as np
 chat_id = 773978697 # Ваш chat ID, не меняйте название переменной
 
 def solution(x: np.array) -> float:
-    t = 10
-    n = len(x)
-    lmbd = x.sum() / (t*n)
-    return lmbd
+    mu = -1-np.exp(1) # математическое ожидание ошибок измерения
+    var = (np.exp(2)-2)*mu**2 # дисперсия ошибок измерения
+    a = 10/(x.mean()**2) # оценка коэффициента ускорения по методу моментов
+    return a

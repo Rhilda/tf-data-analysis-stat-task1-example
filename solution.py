@@ -6,7 +6,7 @@ chat_id = 773978697 # Ваш chat ID, не меняйте название пе�
 
 def solution(x: np.array) -> float:
     # Генерация случайных ошибок измерения скорости
-    errors = np.random.normal(loc=-21, scale=np.exp(1), size=x.shape)
+    errors = np.random.normal(loc=-47, scale=np.exp(1), size=x.shape)
 
     # Средняя скорость машин за 10 секунд с учетом ошибок измерения
     v_mean = np.mean(x + errors)
